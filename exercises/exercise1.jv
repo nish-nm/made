@@ -1,4 +1,4 @@
-//create pipeline
+//create ETL pipeline
 pipeline AirportsPipeline {
     AirportsExtractor
         -> AirportsTextFileInterpreter 
