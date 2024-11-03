@@ -49,15 +49,15 @@ pipeline TreeProcessingPipeline {
         header: true;
         columns : [
             "lfd_nr" oftype integer,
-            "stadtteil" oftype stadtteil, // Use a custom type with constraints
+            "stadtteil" oftype stadtteil, // custom type with constraints
             "standort" oftype text,
             "baumart_botanisch" oftype text,
             "baumart_deutsch" oftype text,
-            "id" oftype ID, // Use a custom type with constraints
+            "id" oftype ID, // custom type with constraints
             "baumfamilie" oftype text,
         ];
     }
-    
+
     // Load
     block TreeDataLoader oftype SQLiteLoader {
         table: 'trees';
