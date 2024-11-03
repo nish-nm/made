@@ -23,13 +23,13 @@ pipeline TreeProcessingPipeline {
     constraint districtvogelsang on text:
         value matches /^Vogelsang.*$/;
 
-    // Extractor Block
+    // Extract
     block TreeFileFetcher oftype HttpExtractor {
         url: 'https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-herbstpflanzung-2023/exports/csv';
         retries: 2;
     }
 
-    // Interpreter Blocks
+
     block TreeTextInterpreter oftype TextFileInterpreter { 
         encoding: "utf8";
         lineBreak: /\r?\n/;
@@ -40,7 +40,7 @@ pipeline TreeProcessingPipeline {
         enclosing: "";
         enclosingEscape : "";
     }
-
+    //  Transform
     block ColumnRemover oftype ColumnDeleter {
         delete: [column E];
     }
@@ -57,7 +57,8 @@ pipeline TreeProcessingPipeline {
             "baumfamilie" oftype text,
         ];
     }
-
+    
+    // Load
     block TreeDataLoader oftype SQLiteLoader {
         table: 'trees';
         file: './trees.sqlite';
