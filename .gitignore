@@ -3,7 +3,8 @@
 !/data/.gitkeep
 
 *.db
-/db/*.sqlite3
+*.sqlite
+/db/*.sqlite
 
 # Editors
 .vscode/
