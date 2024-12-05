@@ -11,26 +11,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
+    # Checkout the repository
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Step 2: Set up Python 3.11.10
+    # Set up Python 3.11.10
     - name: Set up Python 3.11.10
       uses: actions/setup-python@v4
       with:
         python-version: '3.11.10'
 
-    # Step 3: Install dependencies
+    # Install dependencies
     - name: Install dependencies
       run: |
         python3 -m pip install --upgrade pip
-        pip install -r project/requirements.txt
+        pip install -r requirements.txt
+      working-directory: ./project
 
-    # Step 4: Make test.sh executable
-    - name: Make project/test.sh executable
-      run: chmod +x project/test.sh
+    - name: Make test.sh executable
+      run: chmod +x test.sh
+      working-directory: ./project
 
-    # Step 5: Run tests
     - name: Run tests
-      run: sh project/test.sh
+      run: ./test.sh
+      working-directory: ./project
