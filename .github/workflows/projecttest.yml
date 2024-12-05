@@ -1,0 +1,38 @@
+name: Run project test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - project/**
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Python 3.11.10
+    - name: Set up Python 3.11.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11.10'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install -r project/requirements.txt
+
+    # Step 4: Make test.sh executable
+    - name: Make project/test.sh executable
+      run: chmod +x projecttest.sh
+
+    # Step 5: Run tests
+    - name: Run tests
+      run: sh project/test.sh
