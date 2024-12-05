@@ -32,15 +32,15 @@ pipeline GTFSPipeline {
         constraints: [ValidGeoCoordiante];
     }
 
-    constraint Zone2001 oftype RangeConstraint {
-        lowerBound: 2001;
+    constraint Zone1925 oftype RangeConstraint {
+        lowerBound: 1925;
         lowerBoundInclusive: true;
-        upperBound: 2001;
+        upperBound: 1925;
         upperBoundInclusive: true;
     }
 
     valuetype FilteredZone oftype integer {
-        constraints: [Zone2001];
+        constraints: [Zone1925];
     }
 
     block StopsTableInterpreter oftype TableInterpreter {
