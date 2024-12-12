@@ -25,8 +25,8 @@ pipeline ETLpipeline {
     
     transform temperatureunit {
         from celsius oftype decimal;
-        to fahrenheit oftype decimal;
-        fahrenheit: (celsius * 9/5) + 32;
+        to tempfahrenheit oftype decimal;
+        tempfahrenheit: (celsius * 9/5) + 32;
     }
 
 
