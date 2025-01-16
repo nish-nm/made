@@ -12,7 +12,7 @@ Income and Environmental Impact: Exploring Socioeconomic Influences on Deforesta
 ## Description
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-his data science project explores the correlation between socioeconomic factors, specifically median household income, and environmental conditions, focusing on deforestation and CO₂ emissions across U.S. states. The project aims to understand if and how economic disparities influence environmental impact, providing insights that could inform policy decisions for sustainable development.
+This data science project explores the correlation between socioeconomic factors, specifically median household income, and environmental conditions, focusing on deforestation and CO₂ emissions across U.S. states. The project aims to understand if and how economic disparities influence environmental impact, providing insights that could inform policy decisions for sustainable development.
 
 The project follows an ETL (Extract, Transform, Load) pipeline to collect data from reputable sources like the NCES for income data and the Global Forest Watch for environmental metrics. The pipeline cleans, merges, and loads this data into a structured SQLite database for analysis. Using statistical methods, including correlation and hypothesis testing, the project examines relationships between income levels and environmental degradation indicators.
 

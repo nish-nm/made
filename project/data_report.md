@@ -15,7 +15,7 @@ This project tries to establish a correlation between some socio-economic condit
   
 - **Source Details**:  
   - **Metadata URL**: [Digest of Education Statistics](https://nces.ed.gov/programs/digest/)
-  - **Data URL**: [Median Household Income Data](https://nces.ed.gov/programs/digest/data.xlsx)
+  - **Data URL**: [Median Household Income Data](https://nces.ed.gov/programs/digest/d22/tables/xls/tabn102.30.xlsx)
   - **Data Type**: Excel spreadsheet
   
 - **License**: 
