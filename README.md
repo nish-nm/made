@@ -4,6 +4,8 @@ This project implements an ETL (Extract, Transform, Load) pipeline that combines
 
 The pipeline extracts data from online sources, performs necessary transformations and cleanups, and loads the merged dataset into a SQLite database for further analysis. This tool is designed for researchers, policymakers, and data analysts interested in exploring the connections between economic indicators and environmental changes at the state level in the United States.
 
+![Income vs Enviornment Metrics across years](project/EDA1.png)
+
 ## Repository Structure
 
 ```
